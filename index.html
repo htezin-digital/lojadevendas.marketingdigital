@@ -1,0 +1,238 @@
+<html><head><base href="." />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LOJA DE VENDAS HTT</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+body {
+    background: #000000;
+    color: white;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.landing-header {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #000000 50%, #4CAF50 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-header::before,
+.landing-header::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    animation: rotate 4s linear infinite;
+    z-index: 1;
+}
+
+.landing-header::before {
+    left: 0;
+    border-right: none;
+}
+
+.landing-header::after {
+    right: 0;
+    border-left: none;
+}
+
+.landing-header h1 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+    position: relative;
+    z-index: 3;
+    background: #000;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+.landing-header p {
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+.affiliate-contact {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.courses-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.course-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.course-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+}
+
+.course-content {
+    flex: 1;
+}
+
+.course-title {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+
+.course-button {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.course-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+}
+
+.course-button.disabled {
+    background: #666;
+    cursor: not-allowed;
+}
+
+.course-button.disabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.unavailable-overlay {
+    position: relative;
+}
+
+.unavailable-overlay::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: red;
+    transform: translateY(-50%);
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+</head>
+<body>
+<div class="landing-header">
+    <h1>LOJA DE VENDAS HTT</h1>
+    <p>Essa loja há vários cursos disponíveis, escolha oque mais te interessar.</p>
+</div>
+
+<div class="intro-text">
+    <p>PARA SE TORNAR UM AFILIADO ENTRE EM CONTATO COM ESTE GMAIL: <span class="affiliate-contact">heitor.perindossantos@gmail.com</span> e diga que quer ser um Afiliado que iremos entregar o Material de divulgação.</p>
+</div>
+
+<div class="courses-grid">
+    <div class="course-card">
+        <img class="course-image" src="/a/4b7e5184-39e7-4c61-a3a0-20254aaa8f6d" alt="Marketing digital course promotional image" width="200" height="200">
+        <div class="course-content">
+            <h2 class="course-title">CURSO DE MARKETING DIGITAL</h2>
+            <p>Aprenda estratégias avançadas de marketing digital, técnicas de vendas online e muito mais!</p>
+            <a href="https://htezin-digital.github.io/Loja-Digital-HTT/" class="course-button">ACESSAR CURSO</a>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="unavailable-overlay">
+            <svg class="course-image" viewBox="0 0 200 200" fill="none" stroke="#666">
+                <rect width="200" height="200" fill="#1a1a1a"/>
+                <path d="M50,100 L150,100 M100,50 L100,150" stroke-width="4"/>
+            </svg>
+        </div>
+        <div class="course-content">
+            <h2 class="course-title">INDISPONÍVEL</h2>
+            <p>AGUARDE ESTAR DISPONÍVEL</p>
+            <button class="course-button disabled">INDISPONÍVEL</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="unavailable-overlay">
+            <svg class="course-image" viewBox="0 0 200 200" fill="none" stroke="#666">
+                <rect width="200" height="200" fill="#1a1a1a"/>
+                <path d="M50,100 L150,100 M100,50 L100,150" stroke-width="4"/>
+            </svg>
+        </div>
+        <div class="course-content">
+            <h2 class="course-title">INDISPONÍVEL</h2>
+            <p>AGUARDE ESTAR DISPONÍVEL</p>
+            <button class="course-button disabled">INDISPONÍVEL</button>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <div class="unavailable-overlay">
+            <svg class="course-image" viewBox="0 0 200 200" fill="none" stroke="#666">
+                <rect width="200" height="200" fill="#1a1a1a"/>
+                <path d="M50,100 L150,100 M100,50 L100,150" stroke-width="4"/>
+            </svg>
+        </div>
+        <div class="course-content">
+            <h2 class="course-title">INDISPONÍVEL</h2>
+            <p>AGUARDE ESTAR DISPONÍVEL</p>
+            <button class="course-button disabled">INDISPONÍVEL</button>
+        </div>
+    </div>
+</div>
+</body></html>
